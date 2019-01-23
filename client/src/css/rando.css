@@ -1,0 +1,154 @@
+.smallboo{
+  width:50px;
+  height:50px;
+}
+.booMove{
+  animation:10s infinite ease-in move;
+  width:20%;
+  position: absolute;
+  right:0%;
+  top:15%;
+}
+.booShy{
+  position: absolute;
+  top:26%;
+  left:81%;
+  width:80px;
+  height:80px;
+  animation: ghost 20s ease-in-out;
+}
+.ghosts{
+  width:200px;
+  height:200px;
+  position: absolute;
+  top:100%;
+  left:20%;
+  animation: 5s ease-in-out ghostUp infinite;
+}
+.mansion{
+  width:25%;
+  top:22.5%;
+  left:37.5%;
+  position: absolute;
+}
+.kingboo{
+  position: absolute;
+  top:30%;
+  left:47.5%;
+  width:5%;
+  opacity:1;
+
+
+
+}
+
+.kingboo:hover{
+    animation:.5s 1 ease-in scaler;
+}
+.ghosts5:hover{
+    animation:.5s 1 ease-in scaler;
+}
+.ghosts4:hover{
+    animation:.5s 1 ease-in scaler;
+}
+.ghosts3:hover{
+    animation:.5s 1 ease-in scaler;
+}
+.ghosts2:hover{
+    animation:.5s 1 ease-in scaler;
+}
+
+@keyframes scaler{
+  0%{
+    opacity:0;
+    transform:scale(1);
+  }
+  49%{
+    opacity:1;
+  }
+  100%{
+    transform:scale(6);
+
+  }
+
+}
+.ghosts2{
+  position: absolute;
+  top: 50%;
+  left:80%;
+  width:50px;
+  height:50px;
+}
+.ghosts3{
+  position: absolute;
+  top: 20%;
+  left:30%;
+  width:50px;
+  height:50px;
+}
+.ghosts4{
+  position: absolute;
+  top: 30%;
+  left:65%;
+  width:50px;
+  height:50px;
+}
+.ghosts5{
+  position: absolute;
+  top: 50%;
+  left:35%;
+  width:50px;
+  height:50px;
+}
+
+.booAttack{
+  position: absolute;
+  top:25%;
+  left:80%;
+  width:100px;
+  height:100px;
+
+  animation: ghost 5s ease-in-out infinite;
+}
+@keyframes move {
+  0%{
+  right:0%;
+  opacity:.8;
+
+  }
+  50%{
+    right:100%;
+    opacity:0;
+
+  }
+  100%{
+      right:0;
+      opacity:0;
+    }
+}
+@keyframes ghost{
+  0%{
+    opacity:0
+  }
+  50%{
+    opacity:1;
+  }
+  100%{
+    opacity:0
+  }
+}
+
+@keyframes ghostUp{
+  0%{
+    opacity:0;
+    top:100%;
+  }
+  50%{
+    opacity:1;
+    top:40%;
+  }
+  100%{
+    opacity:0;
+    top:0%;
+  }
+}

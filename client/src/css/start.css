@@ -1,0 +1,106 @@
+.title{
+  text-align: center;
+  animation: brokenLight 5s ease-in-out infinite;
+  color:#262626;
+  font-size:80px;
+  font-family:"Coiny";
+}
+body{
+  cursor:crosshair;
+}
+.startButton{
+  border:2px solid yellow;
+  background:black;
+  color:yellow;
+  height:50px;
+
+  font-weight:bold;
+}
+.startContainer{
+  animation:20s ghostHalf infinite ease-in-out;
+}
+.rowMain{
+  margin-top:25%;padding-bottom:50%
+}
+@keyframes ghostHalf{
+  0%{
+    opacity:.5;
+  }
+  50%{
+    opacity:1;
+  }
+  100%{
+    opacity:.5;
+  }
+}
+@keyframes brokenLight{
+  0%{
+    color:#262626;
+
+  }
+  59%{
+    color:#262626;
+  }
+  60%{
+    color:yellow;
+  }
+  61%{
+    color:#262626;
+  }
+
+  62%{
+    color:yellow;
+  }
+  63%{
+    color:#262626;
+  }
+  100%{
+    color:#262626;
+  }
+}
+.startButton:hover{
+  color:red;
+  border:2px solid red;
+}
+body{
+  background:black;
+}
+
+#root{
+  padding:0;
+}
+
+.boosRandom{
+  position:absolute;
+
+}
+.boo1S{
+  animation: ghost infinite ease-in-out 5s;
+}
+{
+  animation: ghost infinite ease-in-out 17s;
+}
+.boo2A{
+  animation: ghost infinite ease-in-out 2s;
+}
+.boo2S{
+  animation: ghost infinite ease-in-out 13s;
+}
+.boo3A{
+  animation: ghost infinite ease-in-out 4s;
+}
+.boo3S{
+  animation: ghost infinite ease-in-out 14s;
+}
+.boo4S{
+  animation: ghost infinite ease-in-out 12s;
+}
+.boo4A{
+  animation: ghost infinite ease-in-out 7s;
+}
+.boo5A{
+  animation: ghost infinite ease-in-out 8s;
+}
+.boo5S{
+  animation: ghost infinite ease-in-out 10s;
+}
