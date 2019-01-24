@@ -1,0 +1,79 @@
+.healthBar{
+  float:left;
+  margin-top:2.5%;
+  margin-left:2.5%;
+  width:200px;
+  height:30px;
+  background:#262626;
+  border-radius:10px;
+  border:2px solid red;
+}
+.scoreText{
+  color:yellow;
+
+  font-weight: bold;
+  font-family:monospace;
+  float:right;
+  position: absolute;
+  top:10%;
+  right:4%;
+}
+.booIcon{
+  width:40px;
+  float:left;
+  height:40px;
+  margin-top:2px;
+}
+.booKillBox{
+  position:absolute;
+  width:15%;
+  top:10%;
+  right:5%;
+}
+.booKillCount{
+  color:red;
+  font-weight: bold;
+  font-family: monospace;
+}
+.fr{
+
+position: absolute;
+right:1.5%;
+top:1.5%
+}
+.blood{
+  background:red;
+  color:white;
+
+  text-align:center;
+  width:200px;
+  position:relative;
+  right:1px;
+  height:28px;
+  border-radius:10px
+}
+.container-fluid{
+  padding:20px;
+  padding-bottom:90%;
+}
+.boo{
+  width:75px;
+  height:75px;
+  margin:20px;
+  animation:appear .5s 1 ease-in;
+
+}
+.boo:hover{
+  padding-right:5px;
+  border:2px solid red;
+  border-radius: 50%;
+}
+@keyframes appear{
+  from{  opacity:0;}
+  to{   opacity:1;}
+}
+.booContainer{
+  padding-bottom:20%;
+  width:80%;
+  margin-left:10%;
+}

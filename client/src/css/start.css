@@ -24,13 +24,13 @@ body{
 }
 @keyframes ghostHalf{
   0%{
-    opacity:.5;
-  }
-  50%{
     opacity:1;
   }
-  100%{
+  50%{
     opacity:.5;
+  }
+  100%{
+    opacity:1;
   }
 }
 @keyframes brokenLight{
