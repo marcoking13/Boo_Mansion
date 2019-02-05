@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Starting from "./starting_container.js";
 import BooMap from "./boo_map_component.js";
 import  CoreGame from "./core_game_component.js";
+import  Ender from "./ender_component.js";
 class App extends Component {
   constructor(props){
     super(props);
@@ -22,12 +23,16 @@ class App extends Component {
           <Starting pageChange = {this.pageChange} />
         </div>
       );
-    }else if (this.state.url === "map"){
-    return  <div className="container-flui">     <div className="sheet">   <BooMap pageChange = {this.pageChange}/>  </div>  </div>
+    }
+    else if (this.state.url === "map"){
+      return  <div className="container-flui">     <div className="sheet">   <BooMap pageChange = {this.pageChange}/>  </div>  </div>
     }
     else if (this.state.url === "core" || this.state.url.url == "core"){
-    return  <div> <CoreGame pageChange = {this.pageChange} data ={this.state.url.data}/> </div>
-  }
+      return  <div> <CoreGame pageChange = {this.pageChange} data ={this.state.url.data}/> </div>
+    }
+    else if (this.state.url.url === "end" || this.state.url ==="end"){
+      return  <div> <Ender pageChange = {this.pageChange} data ={this.state.data} meta = {this.state.data }/> </div>
+    }
   }
 }
 
