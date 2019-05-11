@@ -17,6 +17,8 @@ class RandomBoos extends React.Component {
       <img className="booShy" src="images/booShy3.png"/>
       <img className="booAttack" src="images/booAttack3.png"/>
       <img className="ghosts" src="images/ghost.png"/>
+      <img className="ghostsMobile1" src="images/ghost.png"/>
+      <img className="ghostsMobile2" src="images/ghost.png"/>
       <img className="ghosts2" src="images/booShy4.png" onMouseOver={(e)=>{
         e.target.src = "images/booAttack5.png";
       }}

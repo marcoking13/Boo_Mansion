@@ -39,3 +39,101 @@
 .start{
   border:2px solid red;background:black;width:25%;margin-top:30%;color:white;background:#262626;
 }
+@media screen and (max-width:580px){
+  .exit{
+    position: absolute;
+    top:-2% !important;
+    left:70% !important;
+  }
+  .booTitle{
+    color:white;font-size:30px;text-align:center;width:50%;
+  }
+  .row2{
+    padding-top: 5%;
+  }
+.booType{
+  width:100%;
+  margin-top:350px !important;
+  position: relative;
+  left:-170px;
+  width:200px !important;
+  height:200px !important;
+}
+.start{
+  position: relative;
+  top:30px !important;
+  left:-160px !important;
+  background:red;
+}
+  .icon{
+    position: relative;
+    top:15px !important;
+  }
+  .arrL{
+    position: absolute;
+    left:350%;
+    top:80%;
+  }
+  .details{
+    width:100%;
+    margin-left: 40px;
+  }
+  .mapRow{
+    padding-bottom:20% !important;
+  }
+  .arrR{
+    position: relative;
+    top:80%;
+    right:150px;
+  }
+}
+@media  screen  and  (max-width:1000px){
+  .detail{
+    margin-left:-20%;
+  }
+  .arrR{
+    margin-top:75px;
+  }
+  .arrL{
+      margin-top:75px;
+  }
+  .start{
+    position: relative;
+    left:-55px;
+    top:-50px;
+    width:200px;
+
+  }
+  .booType{
+    width:100px;height:100px;margin-left:-5%;
+    margin-top:5%;
+  }
+  .exit{
+    width:100px;
+    position: absolute;
+    top:-4.5%;
+    left:85%;
+    background:black;
+    border:2px solid red;
+  }
+
+  .mapRow{
+
+    padding-left:0%;
+    padding-bottom:20px;
+    border-bottom:2px solid red;
+  }
+  .mapCon{
+    border:5px solid purple;
+  }
+  .icon{
+    width:30px;
+    height:30px;
+    top:5px;
+    position:relative;
+  }
+  .exit:hover{
+    background:red;
+
+  }
+}

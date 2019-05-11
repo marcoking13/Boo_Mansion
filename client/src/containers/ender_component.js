@@ -15,13 +15,11 @@ class Ender extends React.Component {
               <div style={{marginTop:"5%"}}>
 
 
-              <div className="scoreBox"style={{paddingBottom:"5%",marginLeft:"40%",width:"20%",border:"10px solid violet",borderRadius:"10px",background:"black"}}>
-                <h1 className="scoreFinal" style={{textAlgin:"right",marginLeft:"10%",marginTop:"5%",color:"orange",fontSize:"50px",fontWeight:"bold"}}>Score:<strong>{this.props.data.score}</strong></h1>
-                <h1 className="scoreFinal" style={{textAlgin:"center",marginLeft:"10%",marginTop:"5%",color:"orange",fontSize:"50px",fontWeight:"bold"}}>Kills:<strong>{this.props.data.kills}</strong></h1>
-                <h1 className="scoreFinal" style={{textAlgin:"center",marginLeft:"10%",marginTop:"5%",color:"orange",fontSize:"50px",fontWeight:"bold"}}>Health:<strong>{this.props.data.health}</strong></h1>
-                <div className="hpBar"style={{width:"150px",height:"30px",marginLeft:"22.5%",borderRadius:"10px",marginTop:"5%"}}>
-                  <div className="bloodF"style={{borderRadius:"10px",width:"150px",height:"30px",background:"red"}}></div>
-                </div>
+              <div className="scoreBox"style={{paddingBottom:"5%",marginLeft:"35%",width:"30%",border:"10px solid violet",borderRadius:"10px",background:"black"}}>
+                <h2 className="scoreFinal" >Score:<strong>{this.props.data.score}</strong></h2>
+                <h2 className="scoreFinal">Kills:<strong>{this.props.data.kills}</strong></h2>
+                <h2 className="scoreFinal" >Health:<strong>{this.props.data.health}</strong></h2>
+
               </div>
 
               </div>

@@ -74,6 +74,8 @@ class CoreGame extends React.Component{
 
                 if(e.target.attributes.alive.value == 1){
                 e.target.setAttribute("src","images/smoke.png");
+                e.target.classList.add("disa");
+                e.target.classList.remove("boo");
                 var counter = parseInt(e.target.key);
                 e.target.setAttribute("alive",-1);
 

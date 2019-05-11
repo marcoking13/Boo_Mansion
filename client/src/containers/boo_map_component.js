@@ -209,9 +209,9 @@ class BooMansion extends React.Component {
             <div className="col-5">
             <br />
               <ul>
-                <li className="detail">Level: {this.state.levels[this.state.counter].level}</li>
-                <li className="detail">Boo Count:  {this.state.levels[this.state.counter].booCount}</li>
-                <li className="detail">Heath:  {this.state.levels[this.state.counter].health}</li>
+                <li className="detail"><strong>Level:</strong> {this.state.levels[this.state.counter].level}</li>
+                <li className="detail"><strong> Count: </strong> {this.state.levels[this.state.counter].booCount}</li>
+                <li className="detail"><strong>Heath: </strong> {this.state.levels[this.state.counter].health}</li>
               </ul>
             </div>
               <div className="col-4">

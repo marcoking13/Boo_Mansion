@@ -8,6 +8,31 @@
   border-radius:10px;
   border:2px solid red;
 }
+body{
+  padding-bottom:5%;
+}
+.disa{
+
+  width:0px;
+  height:0px;
+  opacity:0;
+
+  animation:.7s 1 ease-out disappear;
+
+}
+@keyframes disappear {
+  0%{
+    width:100px;
+
+    height:100px;
+    opacity:1;
+  }
+  100%{
+    width:100px;
+    height:100px;
+    opacity:0;
+  }
+}
 .scoreText{
   color:yellow;
 
@@ -72,8 +97,33 @@ top:1.5%
   from{  opacity:0;}
   to{   opacity:1;}
 }
+.quit{
+width:100px;
+}
 .booContainer{
-  padding-bottom:20%;
+  padding-bottom:30%;
   width:80%;
   margin-left:10%;
+}
+@media screen and (max-width:580px){
+  .booKillBox{
+    right:80% !important;
+    position: absolute;
+  }
+  .booIcon{
+    opacity:0;
+    width:0px !important;
+    height:0px !important;
+  }
+  .quit{
+position: absolute;
+top:91%;
+right:1%;
+  }
+}
+@media screen and (max-width:1000px){
+  .booKillBox{
+    right:15%;
+    top:10.15%;
+  }
 }
