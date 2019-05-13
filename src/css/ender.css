@@ -27,7 +27,7 @@ strong{
     .scoreBox{
       width:200px !important;
       position: absolute;
-      left:-9%;
+      left:-5%;
       top:20%;
     }
     .scoreFinal{
@@ -38,9 +38,9 @@ strong{
     .backToMap{
         position: absolute;
         top:65% !important;
-        left:-11%;
+        left:-17%;
         top:70%;
-        width:250px !important;
+        width:50%;
 
     }
 

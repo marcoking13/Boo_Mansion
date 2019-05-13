@@ -20,6 +20,12 @@ body{
   animation:.7s 1 ease-out disappear;
 
 }
+body{
+cursor: crosshair;
+}
+.container-fluid{
+  padding-bottom:100%;
+}
 @keyframes disappear {
   0%{
     width:100px;
