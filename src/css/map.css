@@ -11,10 +11,7 @@
 .row2{
   background: black;
   padding-bottom:15%;
-  padding-right: 5%;
-}
-.mapRow{
-  background:black;
+  width:109%;
 }
 .exit{
   float:right;margin-right:5%;height:40px;border:red 2px solid;background:red;color:white;text-align:center;width:5%;margin-top:5%;
@@ -69,7 +66,7 @@
 .start{
   position: relative;
   top:30px !important;
-  left:-160px !important;
+  left:-170px !important;
   background:red;
 }
   .icon{
