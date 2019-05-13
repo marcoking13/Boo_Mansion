@@ -8,8 +8,7 @@ class RandomBoos extends React.Component {
       <div  className="booMove">
 
         <img className="smallboo" src="images/boo1.png"/>
-        <img className="smallboo" src="images/booattack4.png"/>
-        <img className="smallboo" src="images/booattack4.png"/>
+      
 
      </div>
       <img className="kingboo" src="images/kingboo2.png"/>
