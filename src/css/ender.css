@@ -24,13 +24,10 @@ strong{
     text-align:center;margin-top:10%;color:orange;font-size:30px;font-weight:bold
 }
 @media screen and (max-width:580px){
-  .container-fluid{
-
-  }
     .scoreBox{
       width:200px !important;
       position: absolute;
-      left:-5%;
+      left:-9%;
       top:20%;
     }
     .scoreFinal{
@@ -41,9 +38,9 @@ strong{
     .backToMap{
         position: absolute;
         top:65% !important;
-        left:-17%;
+        left:-11%;
         top:70%;
-        width:50%;
+        width:250px !important;
 
     }
 
