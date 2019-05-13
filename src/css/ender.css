@@ -24,6 +24,9 @@ strong{
     text-align:center;margin-top:10%;color:orange;font-size:30px;font-weight:bold
 }
 @media screen and (max-width:580px){
+  .container-fluid{
+
+  }
     .scoreBox{
       width:200px !important;
       position: absolute;

@@ -1,5 +1,5 @@
 .navigator{
-  width:100%;border-bottom:2px solid purple;padding-top:10px;
+  width:100%;background:black;border-bottom:2px solid purple;padding-top:10px;
 }
 .icon{
   margin-left:5%;float:left;width:3%
@@ -8,7 +8,9 @@
   color:white;font-size:20px;text-align:center;width:20%;
 }
 
-
+.row2{
+  background: black;
+}
 .exit{
   float:right;margin-right:5%;height:40px;border:red 2px solid;background:red;color:white;text-align:center;width:5%;margin-top:5%;
 }
@@ -50,6 +52,7 @@
   }
   .row2{
     padding-top: 5%;
+    padding-bottom: 20%;
   }
 .booType{
   width:100%;
@@ -84,7 +87,7 @@
   .arrR{
     position: relative;
     top:80%;
-    right:150px;
+    right:200px;
   }
 }
 @media  screen  and  (max-width:1000px){

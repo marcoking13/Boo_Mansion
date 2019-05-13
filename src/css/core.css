@@ -24,7 +24,7 @@ body{
 cursor: crosshair;
 }
 .container-fluid{
-  padding-bottom:100%;
+  height:1200px;
 }
 @keyframes disappear {
   0%{

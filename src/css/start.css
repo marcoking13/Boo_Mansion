@@ -117,11 +117,17 @@ body{
   heigth:0px;
   animation:none ease-in 0 0;
 }
+
 @media screen and (max-width: 1000px){
   .startButton{
     position: relative;
     top:150px;
 
+  }
+  
+  body{
+    background:url("startmenu.jpg") !important;
+    padding-left:0;
   }
   .smallboo{
     width:30px !important;
