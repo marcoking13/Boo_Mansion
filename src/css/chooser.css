@@ -1,0 +1,79 @@
+.chooseCon{
+
+  margin-top: 10%;
+}
+.chooseTitle{
+  color:#f4f4f4;
+  text-align: center;
+  margin-top: 5%;
+}
+.booChoice{
+  width:99%;
+
+}
+.levelCon{
+  float:left;
+  width:30%;
+  margin-left: 15%;
+}
+.levelTe{
+  clear:both;
+  text-align: center;
+  font-size:20px;
+  color:#f4f4f4;
+  font-family: monospace;
+}
+.booChoice:hover{
+  animation:bigger .2s ease-in 1;
+  width:105%;
+  position: relative;
+  bottom:10px;
+
+
+
+}
+
+.levelCon{
+  border-radius:10px;
+  background:#262626;
+  border:4px dashed white;
+  padding:10px;
+}
+.levelCon:hover{
+  border-width:5px;
+  border-color:red;
+
+}
+.levelCon:hover > .levelTe{
+  position: relative;
+  top:10px;
+  color:red !important;
+}
+@keyframes bigger{
+  0%{
+    width:100%;
+  }
+  100%{
+    width:105%;
+  }
+}
+
+
+@media screen and (max-width:580px){
+  .levelCon{
+    width:70%;
+    margin-top: 5%;
+
+  }
+  .levelTe{
+    font-size:10px;
+  }
+  .chooseCon{
+    margin-top: 15%;
+  }
+  .chooseTitle{
+
+    margin-top: 15%;
+  }
+
+}

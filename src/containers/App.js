@@ -3,6 +3,7 @@ import Starting from "./starting_container.js";
 import BooMap from "./boo_map_component.js";
 import  CoreGame from "./core_game_component.js";
 import  Ender from "./ender_component.js";
+import  GameChoose from "./game_choose_container.js";
 class App extends Component {
   constructor(props){
     super(props);
@@ -23,6 +24,9 @@ class App extends Component {
           <Starting pageChange = {this.pageChange} />
         </div>
       );
+    }
+    else if(this.state.url === "choose"){
+        return <GameChoose changeURL = {this.pageChange} />
     }
     else if (this.state.url === "map"){
       return  <div className="container-flui">     <div className="sheet">   <BooMap pageChange = {this.pageChange}/>  </div>  </div>

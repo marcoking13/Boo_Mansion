@@ -16,7 +16,7 @@ class Starting extends Component {
         <div className="row rowMain">
           <div className="col-4"></div>
           <div className="col-4">
-            <button className="btn startButton"style={{width:"100%"}} onClick = {()=>{this.props.pageChange("map")}}> Start Game </button>
+            <button className="btn startButton"style={{width:"100%"}} onClick = {()=>{this.props.pageChange("choose")}}> Start Game </button>
           </div>
           <div className="col-4"></div>
         </div>
