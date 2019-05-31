@@ -8,13 +8,13 @@
   margin-top: 5%;
 }
 .booChoice{
-  width:99%;
+  width:100%;
 
 }
 .levelCon{
   float:left;
-  width:30%;
-  margin-left: 15%;
+  width:35%;
+  margin-left: 12.5%;
 }
 .levelTe{
   clear:both;
@@ -61,7 +61,7 @@
 
 @media screen and (max-width:580px){
   .levelCon{
-    width:70%;
+    width:30%;
     margin-top: 5%;
 
   }
@@ -70,9 +70,12 @@
   }
   .chooseCon{
     margin-top: 15%;
+    position: relative;
+    right:2%;
   }
   .chooseTitle{
 
+    font-weight: bold;
     margin-top: 15%;
   }
 
