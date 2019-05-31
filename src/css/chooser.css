@@ -59,17 +59,19 @@
 }
 
 
-@media screen and (max-width:580px){
+@media screen and (max-width:480px){
   .levelCon{
-    width:30%;
-    margin-top: 5%;
+    width:35%;
+    float:left;
+    position: relative;
+    top:5%;
 
   }
   .levelTe{
     font-size:10px;
   }
   .chooseCon{
-    margin-top: 15%;
+    margin-top: 25%;
     position: relative;
     right:2%;
   }
