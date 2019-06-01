@@ -21,10 +21,10 @@
 @media screen and (max-width:580px){
   .lls{
     position: relative;
-    right:1px;
+    right:2px;
   }
   .ico2{
-    right:-7px !important;
+    right:-15px !important;
   }
   .icoE{
     width:20%;
