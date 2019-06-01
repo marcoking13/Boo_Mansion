@@ -20,8 +20,8 @@ render(){
 
          </div>
          <button className="backToMap btn"style={{width:"25%",fontWeight:"bold",background:"black",border:"3px solid red",color:"white",marginLeft:"37.5%",marginTop:"5%",fontFamily:"sans-serif",textAlign:"center",height:"40px"}}
-            onClick = {()=>{this.props.pageChange("map",null)}}
-            >Back To Map</button>
+            onClick = {()=>{this.props.pageChange("start",null)}}
+            >Main Menu</button>
      </div>
 
    )
