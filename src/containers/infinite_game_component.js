@@ -18,6 +18,17 @@ class Infinite extends React.Component{
 
         },
         {
+          image:"images/booShy2.png",
+          damage:0,
+
+        },
+      
+        {
+          image:"images/booAttack5.png",
+          damage:2,
+
+        },
+        {
           image:"images/booAttack2.png",
           damage:2,
 
@@ -142,7 +153,7 @@ class Infinite extends React.Component{
 
   render(){
     return (
-      <div className="container-fluid"style={{background:"black", backgroundSize: "cover"}}>
+      <div style={{background:"url('images/backgrounds/startmenu.jpg')"}}className="container-fluid">
       <div>  <img className="tIcon"  src="images/time.png"/><h1 className="scoreText">{this.state.time}</h1></div>
         <div className="booKillBox"> <img className="booIcon"  src="images/logo.png"/> <h1 className="booKillCount">{this.state.booKills}</h1>  </div>
       <a href="/">  <button  className="quit btn-danger btn fr" > Quit </button> </a>
