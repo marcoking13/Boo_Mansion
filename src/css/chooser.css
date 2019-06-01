@@ -38,6 +38,7 @@
   background:#262626;
   border:4px dashed white;
   padding:10px;
+
 }
 .levelCon:hover{
   border-width:5px;
@@ -58,13 +59,19 @@
   }
 }
 
-
+@keyframes little{
+  0%{opacity:0}
+  100%{opacity:1}
+}
+.littleBo{
+  animation: little .5s ease-in 1;
+}
 @media screen and (max-width:480px){
   .levelCon{
     width:35%;
     float:left;
     position: relative;
-    top:5%;
+    top:2.5%;
 
   }
   .levelTe{

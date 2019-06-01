@@ -9,6 +9,32 @@
   right:0%;
   top:15%;
 }
+.icoE{
+  width:15%;
+  position: relative;
+  right:10px;
+}
+
+.boE{
+  right:20px;
+}
+@media screen and (max-width:580px){
+  .lls{
+    position: relative;
+    right:1px;
+  }
+  .ico2{
+    right:-7px !important;
+  }
+  .icoE{
+    width:20%;
+    position: relative;
+    right:10px;
+  }
+  .boE{
+    right:5px;
+  }
+}
 .booShy{
   position: absolute;
   top:26%;

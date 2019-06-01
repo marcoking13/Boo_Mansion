@@ -4,6 +4,7 @@ import BooMap from "./boo_map_component.js";
 import  CoreGame from "./core_game_component.js";
 import  Ender from "./ender_component.js";
 import  GameChoose from "./game_choose_container.js";
+import Infinite from "./infinite_game_component.js";
 class App extends Component {
   constructor(props){
     super(props);
@@ -22,6 +23,13 @@ class App extends Component {
       return (
         <div className="container-flui">
           <Starting pageChange = {this.pageChange} />
+        </div>
+      );
+    }
+    else if(this.state.url === "inf"){
+      return (
+        <div className="container-flui">
+          <Infinite pageChange = {this.pageChange} />
         </div>
       );
     }

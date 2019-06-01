@@ -49,6 +49,13 @@ cursor: crosshair;
   top:10%;
   right:4%;
 }
+.tIcon{
+  width:4%;
+  float:right;
+  position: absolute;
+  top:9%;
+  right:7%;
+}
 .booIcon{
   width:40px;
   float:left;
@@ -112,6 +119,10 @@ width:100px;
   margin-left:10%;
 }
 @media screen and (max-width:580px){
+  .tIcon{
+    width:10%;
+    right:13%;
+  }
   .booKillBox{
     right:80% !important;
     position: absolute;

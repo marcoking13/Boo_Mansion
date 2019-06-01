@@ -9,7 +9,7 @@ class CoreGame extends React.Component{
       game:this.props.data,
       healthShrink: 200 / this.props.data.health,
       health: this.props.data.health,
-
+      time:0,
       boos:[],
       score:0,
       booKills:0
@@ -33,8 +33,8 @@ class CoreGame extends React.Component{
         var end = {
           title:"You Won!",
           kills:this.state.booKills,
-          score:this.state.score,
-          health:this.state.health
+          time:this.state.time
+
         }
         return this.props.pageChange("end",end);
       }
@@ -44,6 +44,9 @@ class CoreGame extends React.Component{
 
   componentDidMount(){
       var k = 0;
+      this.timerInterval = setInterval(()=>{
+          this.setState({time:this.state.time + 1})
+      },1000)
 
 
 
@@ -136,7 +139,7 @@ class CoreGame extends React.Component{
 
     return (
       <div className="container-fluid"style={{background:background, backgroundSize: "cover"}}>
-        <h1 className="scoreText">{this.state.score}</h1>
+        <div className="scoreKillBox"><img className="tIcon"  src="images/time.png"/><h1 className="scoreText">{this.state.time}</h1></div>
         <div className="booKillBox"> <img className="booIcon"  src="images/logo.png"/> <h1 className="booKillCount">{this.state.booKills}</h1>  </div>
       <a href="/">  <button  className="quit btn-danger btn fr" > Quit </button> </a>
         <div className="row">
