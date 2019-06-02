@@ -16,24 +16,13 @@ body{
 
   font-weight:bold;
 }
-.startContainer{
-  animation:20s ghostHalf infinite ease-in-out;
-}
+
 .rowMain{
   margin-top:25%;padding-bottom:50%
 }
 
-@keyframes ghostHalf{
-  0%{
-    opacity:1;
-  }
-  50%{
-    opacity:.5;
-  }
-  100%{
-    opacity:1;
-  }
-}
+
+
 @keyframes brokenLight{
   0%{
     color:#262626;

@@ -98,6 +98,7 @@ class CoreGame extends React.Component{
   }
   TimeUp(){
     clearInterval(this.interval2);
+    clearInterval(this.interval);
     var comment = this.returnComment(this.state.booKills);
 
     var end = {
@@ -105,8 +106,11 @@ class CoreGame extends React.Component{
       kills:this.state.booKills,
       time:this.state.time
     }
-    this.props.pageChange("end",end);
+
+
+   this.props.pageChange("end",end);
   }
+
   returnComment(kills){
 
 
@@ -131,6 +135,7 @@ class CoreGame extends React.Component{
 
     return (
       <div className="container-fluid"style={{background:background, backgroundSize: "cover"}}>
+
         <div className="scoreKillBox"><img className="tIcon"  src="images/time.png"/><h1 className="scoreText">{this.state.time}</h1></div>
         <div className="booKillBox"> <img className="booIcon"  src="images/logo.png"/> <h1 className="booKillCount">{this.state.booKills}</h1>  </div>
       <a href="/">  <button  className="quit btn-danger btn fr" > Quit </button> </a>

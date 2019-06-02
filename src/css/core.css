@@ -11,6 +11,10 @@
 body{
   padding-bottom:5%;
 }
+.laugh{
+  width:1000px;
+  height:1000px;
+}
 .disa{
 
   width:0px;
@@ -136,6 +140,33 @@ width:100px;
 position: absolute;
 top:91%;
 right:1%;
+  }
+}
+.Lose{
+  animation: lose 1 ease-in 2s;
+  background:black;
+  opacity:.9;
+}
+
+.flamer{
+  width:50px;
+  top:90%;
+  height:50px;
+  position: absolute;
+  animation: flames 1s ease-in 1;
+}
+.flame{
+  width:100%;
+  height:100%;
+}
+@keyframes flames {
+  0%{
+    background:inherit;
+    opacity:1
+  }
+  100%{
+    background:black;
+    opacity:.9
   }
 }
 @media screen and (max-width:1000px){
