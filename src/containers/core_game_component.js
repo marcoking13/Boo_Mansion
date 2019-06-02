@@ -14,10 +14,11 @@ class CoreGame extends React.Component{
       score:0,
       booKills:0
     }
-    // Binding Score to this state
-    this.addToScore = this.addToScore(this);
+    window.scrollTo(0,0);
 
   }
+
+
 
   // Looping through the boo array and rendering the html everytime state is updated
   booLoop(){
@@ -27,43 +28,19 @@ class CoreGame extends React.Component{
     });
   }
 
-  componentDidUpdate(){
-
-    if(this.state.booKills >= this.state.game.booCount){
-        var end = {
-          title:"You Won!",
-          kills:this.state.booKills,
-          time:this.state.time
-
-        }
-        return this.props.pageChange("end",end);
-      }
-  }
-
-  break;
-
   componentDidMount(){
       var k = 0;
       this.timerInterval = setInterval(()=>{
           this.setState({time:this.state.time + 1})
       },1000)
 
-
-
       // If boo kills are equal or more than the number of boos in the game then stop the code after the if statement on line 29*
       //-------------------------------------------------------------------
-
-
-
-
       this.interval = setInterval(()=>{
 
-        if(k <= this.state.game.booCount){
-          // Every second create a new coordinate for the top and right positions
-
-          var randomCoord = Math.random() * 90;
-          var randomCoord2 = Math.random() * 90;
-          var styling = {right:randomCoord2+"%",position:"absolute",top:randomCoord+"%"};
+          var randomCoordY = Math.random() * 90;
+          var randomCoordX = Math.random() * 90;
+          var styling = {right:randomCoordX+"%",position:"absolute",top:randomCoordY+"%"};
           k++;
           // Then create an img element with boo image and new coordinates and add the element to and array in the state called (boos)
           // Each element will have a on click function that will kill the boo and remove it from the array and also add 1 to the score and boo Kill
@@ -82,7 +59,6 @@ class CoreGame extends React.Component{
                 var counter = parseInt(e.target.key);
                 e.target.setAttribute("alive",-1);
 
-
                 this.setState({boos:this.state.boos.splice(counter),score:this.state.score + this.state.game.boo.points,booKills:this.state.booKills + 1});
               }
             }}
@@ -92,50 +68,66 @@ class CoreGame extends React.Component{
               src={this.state.game.boo.attackImage}
               className="boo"
               style={styling} />
-
-
             </div>
-
           )});
           // If all the boos are out on the field then stop the interval
-        }else{
-          console.log("Boo Count Exceeded");
-          return clearInterval(this.interval);
-        }
-      },this.state.game.time * 1000);
+        },this.state.game.time * 1000);
         // This interval will run at the same time as the other one
         // Every second the players health will be subtracted by the the number of boos * the amount of damage they do (ex: 800 -= (10 boos) * (2 damage));
         this.interval2 = setInterval(()=>{
           // If player still has health keep interval going
           if(this.state.health > 0 ){
-            var damage = this.state.boos.length - this.state.booKills;
-            console.log(this.state.health);
-            this.setState({health:this.state.health - damage});
+            this.DamagePlayer();
         }else{
             // if player is out of health; end the game
-
-            clearInterval(this.interval2);
-            var end = {
-              title:"You Lost!",
-              kills:this.state.booKills,
-              score:this.state.score,
-              health:this.state.health
-            }
-            this.props.pageChange("end",end);
+            this.TimeUp();
         }
       },1000);
 
   }
-  // Adds to the players' score
-  addToScore(score){
-    this.setState({score:score});
+  returnHealth(limit){
+      if(limit < 0){
+        return 0
+      }else{
+        return limit;
+      }
+  }
+  DamagePlayer(){
+    var damage = this.state.boos.length - this.state.booKills;
+    this.setState({health:this.state.health - damage});
+  }
+  TimeUp(){
+    clearInterval(this.interval2);
+    var comment = this.returnComment(this.state.booKills);
+
+    var end = {
+      title:comment,
+      kills:this.state.booKills,
+      time:this.state.time
+    }
+    this.props.pageChange("end",end);
+  }
+  returnComment(kills){
+
+
+    if(kills <10){
+      return "Horrible";
+    }else if(kills < 25){
+      return "Not Bad..";
+    }else if(kills < 50){
+      return "Very Nice!";
+    }else if(kills < 75){
+      return "Amazing!";
+    }else if(kills < 100){
+      return "You are a Master!";
+    }
+
+
   }
   // Basic HTML for game
   render(){
     var background =` url(${this.props.data.background})`;
-    console.log(background);
-    console.log(this.state.booKills,this.props.booCount);
-
+    var health = this.returnHealth(this.state.health);
 
     return (
       <div className="container-fluid"style={{background:background, backgroundSize: "cover"}}>
@@ -144,7 +136,7 @@ class CoreGame extends React.Component{
       <a href="/">  <button  className="quit btn-danger btn fr" > Quit </button> </a>
         <div className="row">
           <div className="healthBar">
-            <div className="blood"style={{width:this.state.healthShrink * this.state.health}}>{this.state.health}</div>
+            <div className="blood"style={{width:this.state.healthShrink * this.state.health}}>{health}</div>
           </div>
 
         </div>

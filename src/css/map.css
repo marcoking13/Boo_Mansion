@@ -37,11 +37,15 @@
 .detail{
   color:white;margin-left:10%;font-size:30px;font-family:monospace;list-style-type:none;
 }
+body{
+  overflow-x: hidden;
+}
 .booType{
   width:100px;height:100px;margin-left:5%;
+  margin-top: 5%;
 }
 .start{
-  border:2px solid red;background:black;width:25%;margin-top:30%;color:white;background:#262626;
+  border:2px solid red;background:black;width:25%;margin-top:10%;color:white;background:#262626;margin-left: 20%;
 }
 @media screen and (max-width:580px){
   .exit{
@@ -53,15 +57,15 @@
     color:white;font-size:30px;text-align:center;width:50%;
   }
   .row2{
-    padding-top: 5%;
+    padding-top: 1.5%;
     width:112%;
     padding-bottom: 22%;
   }
 .booType{
   width:100%;
-  margin-top:350px !important;
+  margin-top:130px !important;
   position: relative;
-  left:-170px;
+  left:-145px;
   width:200px !important;
   height:200px !important;
 }
@@ -80,9 +84,16 @@
     left:350%;
     top:80%;
   }
-  .details{
-    width:100%;
-    margin-left: 40px;
+  .klop{
+    width:10%;
+    float: left;
+    font-size: 20px;
+
+    text-align: center;
+  }
+  .klopLL{
+    position: relative;
+    left:100px;
   }
   .mapRow{
     padding-bottom:20% !important;

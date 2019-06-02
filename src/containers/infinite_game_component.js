@@ -67,9 +67,9 @@ class Infinite extends React.Component{
     var arr= [];
 
     for(var i =0; i<Math.floor(Math.random () * 3)+1;i++){
-      var randomCoord = Math.random() * 90;
-      var randomCoord2 = Math.random() * 90;
-      var styling = {right:randomCoord2+"%",position:"absolute",top:randomCoord+"%"};
+      var randomCoordX = Math.random() * 90;
+      var randomCoordY = Math.random() * 90;
+      var styling = {right:randomCoordX+"%",position:"absolute",top:randomCoordY+"%"};
       arr.push(
          <img onClick={(e)=>{
 
@@ -101,23 +101,46 @@ class Infinite extends React.Component{
       }
         return arr;
     }
+    returnComment(kills){
+
+
+      if(kills <10){
+        return "Horrible";
+      }else if(kills < 25){
+        return "Not Bad..";
+      }else if(kills < 50){
+        return "Very Nice!";
+      }else if(kills < 75){
+        return "Amazing!";
+      }else if(kills < 100){
+        return "You are a Master!";
+      }
+
+
+    }
+    TimeUp(){
+      if(this.state.count >= this.state.limit){
+          clearInterval(this.interval);
+          var comment = this.returnComment(this.state.booKills);
+          var end = {
+            title:comment,
+            kills:this.state.booKills,
+            time:this.state.time
+          }
+          clearInterval(this.minterval);
+          this.props.pageChange("end",end);
+        }
+    }
 //----------------------------------------------------------
   BooInterval(interval){
 
-        if(this.state.count >= this.state.limit){
-            clearInterval(this.interval);
-            var end = {
-              title:"You Lost!",
-              kills:this.state.booKills,
-              time:this.state.time
-            }
-            clearInterval(this.minterval);
-            this.props.pageChange("end",end);
-          }
+        this.TimeUp();
 
         var ran = Math.floor(Math.random() * 4);
 
-        this.setState({limit:this.state.limit - this.state.game[ran].damage * Math.floor(Math.random() * 3 + 1),boos:this.state.boos.concat(
+        var booDamage = this.state.limit - this.state.game[ran].damage * Math.floor(Math.random() * 3 + 1);
+
+        this.setState({limit:booDamage,boos:this.state.boos.concat(
           <div>
             <audio autoPlay>
               <source src = "images/Boo.wav"type="audio/wav"/>
@@ -143,8 +166,19 @@ class Infinite extends React.Component{
 
   }
 
+  returnLimit(limit){
+      if(limit < 0){
+        return 0
+      }else{
+        return limit;
+      }
+  }
+
 //------------------------------------------------------------
   render(){
+    var limit = this.returnLimit(this.state.limit);
+
+
     return (
       <div style={{background:"url('images/backgrounds/startmenu.jpg')"}}className="container-fluid">
       <div>  <img className="tIcon"  src="images/time.png"/><h1 className="scoreText">{this.state.time}</h1></div>
@@ -152,7 +186,7 @@ class Infinite extends React.Component{
       <a href="/">  <button  className="quit btn-danger btn fr" > Quit </button> </a>
         <div className="row">
           <div className="healthBar">
-            <div className="blood"style={{width:this.state.countShrink * this.state.limit}}>{this.state.limit}</div>
+            <div className="blood"style={{width:this.state.countShrink * limit}}>{limit}</div>
           </div>
 
         </div>

@@ -17,7 +17,7 @@ class BooMansion extends React.Component {
           boo:{
             image:"images/booAttack1.png",
             shyImage:"images/booShy1.png",
-              alive:true,
+            alive:true,
             attackImage:"images/booAttack1.png",
             attackDamage:3,
             taps:1,
@@ -205,13 +205,13 @@ class BooMansion extends React.Component {
             </div>
           </div>
           <div className="row row2">
-          <div className="col-2"></div>
+          <div className="col-1"></div>
             <div className="col-5">
             <br />
               <ul>
-                <li className="detail"><strong>Level:</strong> {this.state.levels[this.state.counter].level}</li>
-                <li className="detail"><strong> Count: </strong> {this.state.levels[this.state.counter].booCount}</li>
-                <li className="detail"><strong>Heath: </strong> {this.state.levels[this.state.counter].health}</li>
+                <li className="detail klop"><strong>Level</strong> {this.state.levels[this.state.counter].level}</li>
+
+                <li className="detail klop klopLL"><strong>Health </strong> {this.state.levels[this.state.counter].health}</li>
               </ul>
             </div>
               <div className="col-4">

@@ -1,12 +1,15 @@
 .mlop{
-  text-align:center;color:red;font-size:40px;font-weight:bold;margin-top:1%;font-family:monospace
+  text-align:center;color:red;font-size:40px;font-weight:bold;margin-top:1%;font-family:monospace;background:black;
 }
 .scoreBox{
-  padding-bottom:5%;margin-left:35%;width:30%;border:10px solid violet;border-radius:10px;background:black
+  padding-bottom:5%;margin-left:35%;width:30%;border:10px solid violet;border-radius:10px;background:black;
 }
 .mt5{
   margin-top: 5%;
 }
 .backToMap{
   width:25%;fontWeight:bold;background:black;border:3px solid red;color:white;margin-left:37.5%;margin-top:5%;font-family:sans-serif;text-align:center;height:40px
+}
+.container-fluid{
+  padding:0;
 }

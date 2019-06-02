@@ -41,7 +41,7 @@ class  GameChoose extends Component {
           </div>
           <div className="levelCon" onClick = {()=>{this.props.changeURL("inf",null)}}>
               <img className="booChoice" src="images/booAttack3.png"/>
-              <p className="levelTe">Infinite</p>
+              <p className="levelTe">Random</p>
           </div>
           </div>
         </div>
@@ -57,7 +57,7 @@ class  GameChoose extends Component {
         </div>
         <div className="levelCon" onClick = {()=>{clearInterval(this.lopinterval);this.props.changeURL("inf",null)}}>
             <img className="booChoice" src="images/booAttack3.png"/>
-            <p className="levelTe">Infinite</p>
+            <p className="levelTe">Random</p>
         </div>
         <div className= "col-1"/>
         </div>
@@ -65,6 +65,7 @@ class  GameChoose extends Component {
       )
     }
   }
+
   render() {
     return (
       <div className="container-fluid">
