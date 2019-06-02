@@ -65,14 +65,14 @@ body{
   width:100%;
   margin-top:130px !important;
   position: relative;
-  left:-145px;
+  left:-135px;
   width:200px !important;
   height:200px !important;
 }
 .start{
   position: relative;
   top:30px !important;
-  left:-170px !important;
+  left:-135px !important;
   background:red;
 }
   .icon{
