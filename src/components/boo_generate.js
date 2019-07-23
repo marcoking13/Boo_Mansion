@@ -9,6 +9,7 @@ constructor(props){
     divs:[]
   }
 }
+
 componentDidMount(){
   this.interval = setInterval(()=>{
       var ran = Math.floor(Math.random() * this.state.boos.length);
@@ -18,14 +19,16 @@ componentDidMount(){
       var posX = ranX + "%";
       this.setState({boos:this.state.boos.concat(<div><img className="littleBo"src={this.state.boos[ran]} style={{position:"absolute",width:"50px",height:"50px",top:posY,left:posX}}/></div>)
     });
-    })
+
+  });
 }
+
 renderBoos(){
   return this.state.divs.map((div)=>{
-    console.log("L");
     return div;
   });
 }
+
  render(){
    return(
      <div>
@@ -34,4 +37,5 @@ renderBoos(){
    )
  }
 }
+
 export default RandomBoos;

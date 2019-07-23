@@ -18,11 +18,9 @@ class CoreGame extends React.Component{
 
   }
 
-
-
   // Looping through the boo array and rendering the html everytime state is updated
   booLoop(){
-
+    // return jsx of each boo in array
     return this.state.boos.map((boo)=>{
       return boo;
     });
@@ -32,44 +30,49 @@ class CoreGame extends React.Component{
       var k = 0;
       this.timerInterval = setInterval(()=>{
           this.setState({time:this.state.time + 1})
-      },1000)
+      },600)
 
       // If boo kills are equal or more than the number of boos in the game then stop the code after the if statement on line 29*
       //-------------------------------------------------------------------
       this.interval = setInterval(()=>{
 
-          var randomCoordY = Math.random() * 90;
-          var randomCoordX = Math.random() * 90;
-          var styling = {right:randomCoordX+"%",position:"absolute",top:randomCoordY+"%"};
           k++;
           // Then create an img element with boo image and new coordinates and add the element to and array in the state called (boos)
           // Each element will have a on click function that will kill the boo and remove it from the array and also add 1 to the score and boo Kill
-          this.setState({boos:this.state.boos.concat(
-            <div>
-              <audio autoPlay>
-                <source src = "images/Boo.wav"type="audio/wav"/>
-              </audio>
-              <img
-              onClick={(e)=>{
-
-                if(e.target.attributes.alive.value == 1){
-                e.target.setAttribute("src","images/smoke.png");
-                e.target.classList.add("disa");
-                e.target.classList.remove("boo");
-                var counter = parseInt(e.target.key);
-                e.target.setAttribute("alive",-1);
-
-                this.setState({boos:this.state.boos.splice(counter),score:this.state.score + this.state.game.boo.points,booKills:this.state.booKills + 1});
-              }
-            }}
-              key = {k-1}
-              id ={(k-1)}
-              alive={1}
-              src={this.state.game.boo.attackImage}
-              className="boo"
-              style={styling} />
-            </div>
+          for(var i =0;i<Math.floor(Math.random () * 3)+1;i++){
+            // Random coords from 0 - 100
+            var randomCoordY = Math.random() * 90;
+            var randomCoordX = Math.random() * 90;
+            // varibale of the coord in styling format
+            var styling = {right:randomCoordX+"%",position:"absolute",top:randomCoordY+"%"};
+            // Push jsx to array in state
+            this.setState({boos:this.state.boos.concat(
+              <div>
+                <audio autoPlay>
+                  <source src = "images/Boo.wav"type="audio/wav"/>
+                </audio>
+                <img
+                  onClick={(e)=>{
+                      // when boo is clicked, turn its image to smoke
+                      // then add to the score, kill, and health of user
+                    if(e.target.attributes.alive.value == 1){
+                      e.target.setAttribute("src","images/smoke.png");
+                      e.target.classList.add("disa");
+                      e.target.classList.remove("boo");
+                      var counter = parseInt(e.target.key);
+                      e.target.setAttribute("alive",-1);
+                      this.setState({boos:this.state.boos.splice(counter),health:this.state.health + Math.floor(Math.random() * 2) +1 ,score:this.state.score + this.state.game.boo.points,booKills:this.state.booKills + 1});
+                    }
+                  }}
+                  key = {k-1}
+                  id ={(k-1)}
+                  alive={1}
+                  src={this.state.game.boo.attackImage}
+                  className="boo"
+                  style={styling} />
+                </div>
           )});
+        }
           // If all the boos are out on the field then stop the interval
         },this.state.game.time * 1000);
         // This interval will run at the same time as the other one
@@ -85,6 +88,8 @@ class CoreGame extends React.Component{
       },1000);
 
   }
+  // If limit is under 0 return 0
+  // If limit is above 0 return its value
   returnHealth(limit){
       if(limit < 0){
         return 0
@@ -92,10 +97,16 @@ class CoreGame extends React.Component{
         return limit;
       }
   }
+  //-------------------------Damaging player
+  // Subracts the total length of boos from the dead boos and to get damaeg
+  // then subracts player's health by damage var
   DamagePlayer(){
     var damage = this.state.boos.length - this.state.booKills;
     this.setState({health:this.state.health - damage});
   }
+  // Clear all intervals
+  // Then comment depending on how user did
+  // set score, comment, and time to the state
   TimeUp(){
     clearInterval(this.interval2);
     clearInterval(this.interval);
@@ -107,12 +118,11 @@ class CoreGame extends React.Component{
       time:this.state.time
     }
 
-
+    // End Page redirect
    this.props.pageChange("end",end);
   }
-
+  // Returns string depending on parameter
   returnComment(kills){
-
 
     if(kills <10){
       return "Horrible";
@@ -125,7 +135,6 @@ class CoreGame extends React.Component{
     }else if(kills < 100){
       return "You are a Master!";
     }
-
 
   }
   // Basic HTML for game

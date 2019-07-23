@@ -5,14 +5,12 @@ class RandomBoos extends React.Component {
  render(){
    return(
      <div>
+
       <div  className="booMove">
-
         <img className="smallboo" src="images/boo1.png"/>
-      
-
      </div>
-      <img className="kingboo" src="images/kingboo2.png"/>
 
+      <img className="kingboo" src="images/kingboo2.png"/>
       <img className="booShy" src="images/booShy3.png"/>
       <img className="booAttack" src="images/booAttack3.png"/>
       <img className="ghosts" src="images/ghost.png"/>
@@ -22,12 +20,15 @@ class RandomBoos extends React.Component {
         e.target.src = "images/booAttack5.png";
       }}
       />
+
       <img className="ghosts3" src="images/booShy4.png" onMouseOver={(e)=>{
         e.target.src = "images/booAttack4.png";
       }}/>
+
       <img className="ghosts4" src="images/booShy5.png" onMouseOver={(e)=>{
         e.target.src = "images/booAttack5.png";
       }}/>
+
       <img className="ghosts5" src="images/booShy5.png" onMouseOver={(e)=>{
           e.target.src = "images/booAttack5.png";
       }}/>
@@ -35,5 +36,6 @@ class RandomBoos extends React.Component {
      </div>
    )
  }
+ 
 }
 export default RandomBoos;
