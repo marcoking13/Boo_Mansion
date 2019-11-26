@@ -16,6 +16,31 @@ strong{
 
     }
 }
+.mlop{
+  text-align:center;color:red;font-size:40px;font-weight:bold;margin-top:1%;font-family:monospace;background:black;
+}
+.scoreBox{
+  padding-bottom:5%;margin-left:35%;width:30%;border:10px solid violet;border-radius:10px;background:black;
+}
+.backToMap{
+  width:25%;fontWeight:bold;background:black;border:3px solid red;color:white;margin-left:37.5%;margin-top:5%;font-family:sans-serif;text-align:center;height:40px
+}
+.backToMapTxt{
+  font-size: 40px;
+  margin-top: 7.5%;
+
+}
+.backToMapTxt:hover{
+  animation: startT 1 ease-in .2s;
+  font-size: 45px;
+}
+
+@media screen and (max-width:580px){
+  .backToMapTxt{
+    margin-top: 70%;
+  }
+}
+
 .backToMap:hover{
   background:red !important;
   color:black !important;

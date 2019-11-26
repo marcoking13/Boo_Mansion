@@ -22,32 +22,6 @@ body{
 }
 
 
-
-@keyframes brokenLight{
-  0%{
-    color:#262626;
-
-  }
-  59%{
-    color:#262626;
-  }
-  60%{
-    color:yellow;
-  }
-  61%{
-    color:#262626;
-  }
-
-  62%{
-    color:yellow;
-  }
-  63%{
-    color:#262626;
-  }
-  100%{
-    color:#262626;
-  }
-}
 .startButton:hover{
   color:red;
   border:2px solid red;

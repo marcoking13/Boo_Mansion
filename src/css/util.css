@@ -1,0 +1,147 @@
+.text-center{
+  text-align: center;
+}
+.mt15{
+  margin-top: 15%;
+}
+.mt5{
+  margin-top: 5%;
+}
+.bb{
+  background:black;
+}
+.co{
+  color: orange;
+}
+.startTitle{
+  font-size: 40px;
+
+}
+.startTitle:hover{
+  font-size: 45px;
+  color:yellow;
+  animation: .1s 1 startT ease-in;
+
+}
+@keyframes startT{
+  from{
+    font-size: 40px;
+    color:yellow
+  }
+  to{
+    font-size: 45px;
+
+  }
+}
+
+@keyframes brokenLight{
+  0%{
+    color:#262626;
+
+  }
+  59%{
+    color:#262626;
+  }
+  60%{
+    color:yellow;
+  }
+  61%{
+    color:#262626;
+  }
+
+  62%{
+    color:yellow;
+  }
+  63%{
+    color:#262626;
+  }
+  100%{
+    color:#262626;
+  }
+}
+.w50{
+  width: 50%;
+}
+.ml25{
+  margin-left: 25%;
+}
+.kingBooPix{
+  position: relative;
+
+  animation: moveUpandDown 2.5s infinite linear;
+}
+@keyframes moveUpandDown{
+  0%{
+    bottom:0
+  }
+  50%{
+    bottom:10px;
+  }
+  100%{
+    bottom:0;
+  }
+}
+@keyframes moveUpandDownB{
+  0%{
+    top:100px;
+  }
+  50%{
+    top:110px;
+  }
+  100%{
+    top:100px;
+  }
+}
+.booPixel{
+  width:40px;
+  height:40px;
+  animation: 1s 4 linear ghoster;
+  position: absolute;
+}
+@keyframes appear{
+  0%{
+    opacity:0
+  }
+  100%{
+    opacity:1
+  }
+}
+@keyframes ghoster{
+  0%{
+    opacity:0
+  }
+  50%{
+    opacity:1
+  }
+  100%{
+  opacity:0
+}
+}
+.gameTitle{
+  font-size: 60px !important;
+  animation: brokenLight 4s infinite linear;
+}
+.cy{
+  color:yellow;
+}
+.w100{
+  width:100%;
+}
+
+.audioFont{
+  font-family: 'Audiowide', cursive;
+}
+.sigmoreFont{
+  font-family: 'Sigmar One', cursive;
+}
+@media screen and (max-width:580px){
+  .moveDownSm{
+    margin-top: 50%;
+  }
+  .kingBooPix{
+    width:100px;
+    animation: moveUpandDownB infinite ease-in-out 2s;
+    top:100px;
+    height:100px;
+  }
+}

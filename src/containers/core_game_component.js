@@ -1,14 +1,15 @@
 import React from "react";
 import "./../css/core.css";
-import Timer from "./../components/timer.js";
+import Timer from "./../components/core/timer.js";
+import Boos from "./../config/map_data.js";
 class CoreGame extends React.Component{
   constructor(props){
     super(props);
     // Initial State
     this.state = {
-      game:this.props.data,
-      healthShrink: 200 / this.props.data.health,
-      health: this.props.data.health,
+      game:Boos,
+      healthShrink:2,
+      health: 200,
       time:0,
       boos:[],
       score:0,
@@ -37,6 +38,7 @@ class CoreGame extends React.Component{
       this.interval = setInterval(()=>{
 
           k++;
+          var randoBoo = Math.floor(Math.random() * this.state.game.length);
           // Then create an img element with boo image and new coordinates and add the element to and array in the state called (boos)
           // Each element will have a on click function that will kill the boo and remove it from the array and also add 1 to the score and boo Kill
           for(var i =0;i<Math.floor(Math.random () * 3)+1;i++){
@@ -61,20 +63,20 @@ class CoreGame extends React.Component{
                       e.target.classList.remove("boo");
                       var counter = parseInt(e.target.key);
                       e.target.setAttribute("alive",-1);
-                      this.setState({boos:this.state.boos.splice(counter),health:this.state.health + Math.floor(Math.random() * 2) +1 ,score:this.state.score + this.state.game.boo.points,booKills:this.state.booKills + 1});
+                      this.setState({boos:this.state.boos.splice(counter),health:this.state.health + Math.floor(Math.random() * 2) +1 ,score:this.state.score + this.state.game[randoBoo].points,booKills:this.state.booKills + 1});
                     }
                   }}
                   key = {k-1}
                   id ={(k-1)}
                   alive={1}
-                  src={this.state.game.boo.attackImage}
+                  src={this.state.game[randoBoo].attackImage}
                   className="boo"
                   style={styling} />
                 </div>
           )});
         }
           // If all the boos are out on the field then stop the interval
-        },this.state.game.time * 1000);
+        }, 1000);
         // This interval will run at the same time as the other one
         // Every second the players health will be subtracted by the the number of boos * the amount of damage they do (ex: 800 -= (10 boos) * (2 damage));
         this.interval2 = setInterval(()=>{
@@ -139,7 +141,7 @@ class CoreGame extends React.Component{
   }
   // Basic HTML for game
   render(){
-    var background =` url(${this.props.data.background})`;
+    var background =` url("images/bb.png")`;
     var health = this.returnHealth(this.state.health);
 
     return (
@@ -150,7 +152,7 @@ class CoreGame extends React.Component{
       <a href="/">  <button  className="quit btn-danger btn fr" > Quit </button> </a>
         <div className="row">
           <div className="healthBar">
-            <div className="blood"style={{width:this.state.healthShrink * this.state.health}}>{health}</div>
+            <div className="blood"style={{width:this.state.health - this.state.healthShrink}}>{health}</div>
           </div>
 
         </div>

@@ -1,16 +1,15 @@
 import React from "react";
-import "./../css/endBox.css";
-import "./../css/rando.css";
+import "./../../css/rando.css";
 class EndBox extends React.Component {
 
 
 render(){
    return(
 
-     <div className="finalSheet container-fluid" style={{background:"url('images/backgrounds/startmenu.jpg')"}}>
+     <div className="finalSheet container-fluid" style={{background:"url('images/bb.png')"}}>
 
          <h1 className="end mlop">{this.props.data.title}</h1>
-
+          <br />
          <div className="mt5">
 
          <div className="scoreBox">
@@ -20,7 +19,7 @@ render(){
 
          </div>
 
-         <button className="backToMap btn"  onClick = {()=>{this.props.pageChange("start",null)}}  >Main Menu</button>
+         <h1 className="backToMapTxt text-center sigmoreFont cy "  onClick = {()=>{this.props.pageChange("start",null)}}  >Main Menu</h1>
 
      </div>
 

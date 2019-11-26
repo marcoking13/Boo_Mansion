@@ -1,33 +1,31 @@
 import React, { Component } from 'react';
-import "./../css/start.css";
-import RandomBoos from "./../components/boo_random_component.js";
+import "./../css/util.css";
+import RandomBoos from "./../components/start/boo_random_component.js";
 class Starting extends Component {
+
   render() {
+      var background = `url("images/bb.png")`;
     return (
-      <div className="startContainer container-fluid"style={{background:"url('images/Backgrounds/startmenu.jpg')"}}>
-
-        <audio autoPlay>
-          <source type="audio/mp3" src="http://66.90.93.122/ost/luigi-s-mansion-gc-rip/losyedrb/029%20-%20Mansion%20%28Exterior%29.mp3"/>
-        </audio>
-
-        <h1 className="title">Boo Tap </h1>
-
-        <div className="row">
+        <div className="container-fluid bb "style={{background:background}}>
+          <br/>
+          <h1 className="gameTitle text-center audioFont cy">Boo Tap</h1>
           <RandomBoos />
-        </div>
-
-        <div className="row rowMain">
-          <div className="col-4"></div>
-
-          <div className="col-4">
-            <button className="btn startButton"style={{width:"100%"}} onClick = {()=>{this.props.pageChange("map")}}> Start Game </button>
+          <div className="row mt5">
+            <div className="col-4"/>
+            <div className="col-4">
+              <img src="images/booPix.png" className="floating w50 ml25 kingBooPix" />
+            </div>
+            <div className="col-4"/>
+          </div>
+          <div className="mt5 row">
+            <div className="col-3"/>
+            <div className="col-6  moveDownSm">
+              <h1 onClick  = {()=>{this.props.pageChange("core")}} className="co text-center startTitle sigmoreFont">Start</h1>
+            </div>
+            <div className="col-3"/>
           </div>
 
-          <div className="col-4"></div>
-          
         </div>
-
-      </div>
     );
   }
 }
