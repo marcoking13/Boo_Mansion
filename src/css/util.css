@@ -1,11 +1,54 @@
+body{
+cursor: crosshair;
+background:black;
+overflow-y: hidden;
+}
+#root{
+  padding:0;
+}
+
+.br10px{
+border-radius:10px;
+}
 .text-center{
   text-align: center;
+}
+.ml35{
+    margin-left:35%;
+}
+.pb5{
+    padding-bottom:5%;
 }
 .mt15{
   margin-top: 15%;
 }
 .mt5{
   margin-top: 5%;
+}
+.bRR{
+    border:2px solid red;
+}
+.ml10{
+  margin-left:10%;
+}
+.pb30{
+  padding-bottom:30%;
+}
+
+.fl{
+  float: left;
+}
+.b26{
+  background:#262626;
+}
+.mt2_5{
+    margin-top:2.5%;
+}
+.ml2_5{
+    margin-top:2.5%;
+}
+.pb5{
+  padding-bottom:5%;
 }
 .bb{
   background:black;
@@ -22,6 +65,131 @@
   color:yellow;
   animation: .1s 1 startT ease-in;
 
+}
+
+.w50{
+  width: 50%;
+}
+.ml25{
+  margin-left: 25%;
+}
+.kingBooPix{
+  position: relative;
+
+  animation: moveUpandDown 2.5s infinite linear;
+}
+.booPixel:hover{
+  animation: 3s ghoster 3 linear;
+}
+.gameTitle{
+  font-size: 60px !important;
+  animation: brokenLight 4s infinite linear;
+}
+.cy{
+  color:yellow;
+}
+
+.w100{
+  width:100%;
+}
+.frr{
+  float: right;
+}
+.posRel{
+    position: relative;
+}
+.posAb{
+  position: absolute;
+}
+.cr{
+  color:red;
+}
+.mono{
+  font-family: monospace;
+}
+.bold{
+  font-weight: bold;
+}
+.br{
+  background: red;
+}
+.cw{
+  color:white;
+}
+.posRel{
+  position: relative;
+}
+
+.audioFont{
+  font-family: 'Audiowide', cursive;
+}
+.sigmoreFont{
+  font-family: 'Sigmar One', cursive;
+}
+.booPixel{
+  width:40px;
+  height:40px;
+  position: absolute;
+}
+
+
+/* Animations */
+@keyframes disappearBig{
+  0%{
+    width:40px;
+    height:40px;
+    opacity: 1
+  }
+  100%{
+    width:100px;
+    height:100px;
+    opacity: 0;
+
+  }
+
+}
+
+@keyframes moveUpandDown{
+  0%{
+    bottom:0
+  }
+  50%{
+    bottom:10px;
+  }
+  100%{
+    bottom:0;
+  }
+}
+@keyframes moveUpandDownB{
+  0%{
+    top:100px;
+  }
+  50%{
+    top:110px;
+  }
+  100%{
+    top:100px;
+  }
+}
+
+@keyframes appear{
+  0%{
+    opacity:0
+  }
+  100%{
+    opacity:1
+  }
+}
+@keyframes ghoster{
+  0%{
+    opacity:1
+  }
+  50%{
+    opacity:0
+  }
+  100%{
+  opacity:1
+}
 }
 @keyframes startT{
   from{
@@ -59,81 +227,78 @@
     color:#262626;
   }
 }
-.w50{
-  width: 50%;
-}
-.ml25{
-  margin-left: 25%;
-}
-.kingBooPix{
-  position: relative;
+@keyframes disappear {
+  0%{
+    width:100px;
 
-  animation: moveUpandDown 2.5s infinite linear;
-}
-@keyframes moveUpandDown{
-  0%{
-    bottom:0
-  }
-  50%{
-    bottom:10px;
+    height:100px;
+    opacity:1;
   }
   100%{
-    bottom:0;
+    width:100px;
+    height:100px;
+    opacity:0;
   }
-}
-@keyframes moveUpandDownB{
-  0%{
-    top:100px;
-  }
-  50%{
-    top:110px;
-  }
-  100%{
-    top:100px;
-  }
-}
-.booPixel{
-  width:40px;
-  height:40px;
-  animation: 1s 4 linear ghoster;
-  position: absolute;
 }
 @keyframes appear{
+  from{  opacity:0;}
+  to{   opacity:1;}
+}
+
+@keyframes flames {
   0%{
-    opacity:0
-  }
-  100%{
+    background:inherit;
     opacity:1
   }
+  100%{
+    background:black;
+    opacity:.9
+  }
 }
-@keyframes ghoster{
+@keyframes move {
+  0%{
+  right:0%;
+  opacity:.8;
+
+  }
+  50%{
+    right:100%;
+    opacity:0;
+
+  }
+  100%{
+      right:0;
+      opacity:0;
+    }
+}
+@keyframes ghost{
   0%{
     opacity:0
   }
   50%{
-    opacity:1
+    opacity:1;
   }
   100%{
-  opacity:0
-}
-}
-.gameTitle{
-  font-size: 60px !important;
-  animation: brokenLight 4s infinite linear;
-}
-.cy{
-  color:yellow;
-}
-.w100{
-  width:100%;
+    opacity:0
+  }
 }
 
-.audioFont{
-  font-family: 'Audiowide', cursive;
+@keyframes ghostUp{
+  0%{
+    opacity:0;
+    top:100%;
+  }
+  50%{
+    opacity:1;
+    top:40%;
+  }
+  100%{
+    opacity:0;
+    top:0%;
+  }
 }
-.sigmoreFont{
-  font-family: 'Sigmar One', cursive;
-}
+
+/*Screen Changes */
 @media screen and (max-width:580px){
   .moveDownSm{
     margin-top: 50%;

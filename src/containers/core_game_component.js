@@ -1,8 +1,13 @@
 import React from "react";
+
 import "./../css/core.css";
+import "./../css/util.css";
+
 import Timer from "./../components/core/timer.js";
 import Boos from "./../config/map_data.js";
+
 class CoreGame extends React.Component{
+
   constructor(props){
     super(props);
     // Initial State
@@ -16,9 +21,7 @@ class CoreGame extends React.Component{
       booKills:0
     }
     window.scrollTo(0,0);
-
   }
-
   // Looping through the boo array and rendering the html everytime state is updated
   booLoop(){
     // return jsx of each boo in array
@@ -119,7 +122,6 @@ class CoreGame extends React.Component{
       kills:this.state.booKills,
       time:this.state.time
     }
-
     // End Page redirect
    this.props.pageChange("end",end);
   }
@@ -145,27 +147,36 @@ class CoreGame extends React.Component{
     var health = this.returnHealth(this.state.health);
 
     return (
-      <div className="container-fluid"style={{background:background, backgroundSize: "cover"}}>
+      <div className="container-fluid"style={{background:background}}>
 
-        <div className="scoreKillBox"><img className="tIcon"  src="images/time.png"/><h1 className="scoreText">{this.state.time}</h1></div>
-        <div className="booKillBox"> <img className="booIcon"  src="images/logo.png"/> <h1 className="booKillCount">{this.state.booKills}</h1>  </div>
-      <a href="/">  <button  className="quit btn-danger btn fr" > Quit </button> </a>
-        <div className="row">
-          <div className="healthBar">
-            <div className="blood"style={{width:this.state.health - this.state.healthShrink}}>{health}</div>
+        <div className="scoreKillBox">
+          <img className="posAb frr tIcon"  src="images/time.png"/>
+          <h1 className="cy bold mono frr posAb scoreText">{this.state.time}</h1>
+        </div>
+
+        <div className="posAb booKillBox">
+          <img className="fl booIcon"  src="images/logo.png"/>
+          <h1 className=" cr monospace bold">{this.state.booKills}</h1>
+        </div>
+
+          <a href="/">
+            <button  className="button ui inverted red posAb quit" > Quit </button>
+          </a>
+
+          <div className="row">
+            <div className="mt2_5 fl br10px b26 bRR ml2_5 healthBar">
+              <div className="blood br10px text-center cw br posRel"style={{width:this.state.health - this.state.healthShrink}}>{health}</div>
+            </div>
+          </div>
+
+          <div className="ml10 pb30 booContainer">
+            {this.booLoop()}
           </div>
 
         </div>
-        <div className="booContainer">
-          {this.booLoop()}
-        </div>
-
-      </div>
-    )
+    );
   }
 
-
 }
-
 
 export default CoreGame;

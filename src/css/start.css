@@ -5,15 +5,12 @@
   font-size:80px;
   font-family:"Coiny";
 }
-body{
-  cursor:crosshair;
-}
+
 .startButton{
   border:2px solid yellow;
   background:black;
   color:yellow;
   height:50px;
-
   font-weight:bold;
 }
 
@@ -21,23 +18,14 @@ body{
   margin-top:25%;padding-bottom:50%
 }
 
-
 .startButton:hover{
   color:red;
   border:2px solid red;
 }
-body{
-  background:black;
-}
-
-#root{
-  padding:0;
-}
-
 .boosRandom{
   position:absolute;
-
 }
+
 .boo1S{
   animation: ghost infinite ease-in-out 5s;
 }

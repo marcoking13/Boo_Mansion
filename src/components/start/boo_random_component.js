@@ -1,5 +1,4 @@
 import React from "react";
-import "./../../css/rando.css";
 import Boos from "./../../config/map_data.js";
 
 class RandomBoos extends React.Component {
@@ -7,20 +6,44 @@ class RandomBoos extends React.Component {
 constructor(props){
   super(props);
   this.state = {
+    coords:[
+      {top:10 + "%",left:90 + "%"},
+      {top:10 + "%",left:5 + "%"},
+      {top:80 + "%",left:5 + "%"},
+      {top:40 + "%",left:50 + "%"},
+      {top:40 + "%",left:20 + "%"},
+      {top:60 + "%",left:30 + "%"},
+      {top:20 + "%",left:65 + "%"},
+      {top:10 + "%",left:25 + "%"},
+      {top:90 + "%",left:65 + "%"},
+      {top:90 + "%",left:25 + "%"},
+      {top:50 + "%",left:85 + "%"},
+      {top:70 + "%",left:70 + "%"}
 
+    ],
     num:10
   }
+}
+
+renderBoos(){
+  var i = 0;
+
+  return this.state.coords.map((coord)=>{
+    i++;
+    return(
+      <img
+      key = {i}
+      style = {coord}
+      src = {"images/booAttack"+Math.floor(Math.random() * 2 + 1).toString()+".png"}
+      className="booPixel" />
+    );
+  });
 }
 
  render(){
    return(
       <div>
-        <img style = {{top:10 + "%",left:90 + "%"}}src = "images/ghost.gif" className="booPixel" />
-        <img style = {{top:10 + "%",left:5 + "%"}}src = "images/ghost.gif" className="booPixel" />
-        <img style = {{top:80 + "%",left:5 + "%"}}src = "images/ghost.gif" className="booPixel" />
-        <img style = {{top:80 + "%",left:90 + "%"}}src = "images/ghost.gif" className="booPixel" />
-
-
+        {this.renderBoos()}
       </div>
     )
  }

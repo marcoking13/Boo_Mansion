@@ -26,13 +26,25 @@ class App extends Component {
         </div>
       );
     }
-    
     else if (this.state.url === "core" || this.state.url.url == "core"){
-      return  <div> <CoreGame pageChange = {this.pageChange} data ={this.state.url.data}/> </div>
+      return  (
+        <div>
+          <CoreGame
+            pageChange = {this.pageChange}
+            data ={this.state.url.data}/>
+        </div>
+      );
     }
 
     else if (this.state.url.url === "end" || this.state.url ==="end"){
-      return  <div> <Ender pageChange = {this.pageChange} data ={this.state.data} meta = {this.state.data }/> </div>
+      return  (
+          <div>
+            <Ender
+              pageChange = {this.pageChange}
+              data ={this.state.data}
+              meta = {this.state.data }/>
+          </div>
+        );
     }
 
   }
