@@ -142,6 +142,7 @@
     width:100px;
     animation: moveUpandDownB infinite ease-in-out 2s;
     top:100px;
+    right:20px;
     height:100px;
   }
 }
