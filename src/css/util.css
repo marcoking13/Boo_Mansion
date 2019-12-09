@@ -1,12 +1,15 @@
 body{
 cursor: crosshair;
-background:black;
+background:url("./../images/bb.png");
 overflow-y: hidden;
 }
 #root{
   padding:0;
 }
 
+.pb20px{
+  padding-bottom: 20px;
+}
 .br10px{
 border-radius:10px;
 }
