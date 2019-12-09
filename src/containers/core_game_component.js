@@ -30,6 +30,18 @@ class CoreGame extends React.Component{
     });
   }
 
+  returnTime(){
+    if(this.state.time >= 0 && this.state.time < 20){
+      return 1;
+    }else if(this.state.time >= 20 && this.state.time < 50){
+        return 2
+    }else if(this.state.time > 50){
+        return Math.floor(Math.random() * 4) + 1;
+    }else{
+      return 1
+    }
+  }
+
   componentDidMount(){
       var k = 0;
       this.timerInterval = setInterval(()=>{
@@ -42,9 +54,10 @@ class CoreGame extends React.Component{
 
           k++;
           var randoBoo = Math.floor(Math.random() * this.state.game.length);
+
           // Then create an img element with boo image and new coordinates and add the element to and array in the state called (boos)
           // Each element will have a on click function that will kill the boo and remove it from the array and also add 1 to the score and boo Kill
-          for(var i =0;i<Math.floor(Math.random () * 3)+1;i++){
+          for(var i =0;i<this.returnTime();i++){
             // Random coords from 0 - 100
             var randomCoordY = Math.random() * 90;
             var randomCoordX = Math.random() * 90;
