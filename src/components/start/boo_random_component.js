@@ -9,7 +9,7 @@ constructor(props){
     coords:[
       {top:20 + "%",left:90 + "%"},
       {top:20 + "%",left:5 + "%"},
-      {top:80 + "%",left:5 + "%"},
+      {top:80 + "%",left:20 + "%"},
       {top:80 + "%",left:10 + "%"},
       {top:40 + "%",left:80 + "%"},
       {top:60 + "%",left:10 + "%"},
