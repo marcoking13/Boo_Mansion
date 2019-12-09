@@ -147,7 +147,7 @@ class CoreGame extends React.Component{
     var health = this.returnHealth(this.state.health);
 
     return (
-      <div className="container-fluid"style={{background:background}}>
+      <div className="container-fluid pb200px"style={{background:background}}>
 
         <div className="scoreKillBox">
           <img className="posAb frr tIcon"  src="images/time.png"/>
@@ -165,7 +165,7 @@ class CoreGame extends React.Component{
 
           <div className="row">
             <div className="mt2_5 fl br10px b26 bRR ml2_5 healthBar">
-              <div className="blood br10px text-center cw br posRel"style={{width:this.state.health - this.state.healthShrink}}>{health}</div>
+              <div className="blood br10px text-center cw br posRel"style={{width:this.state.health - this.state.healthShrink}}></div>
             </div>
           </div>
 

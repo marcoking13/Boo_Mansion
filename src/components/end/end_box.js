@@ -10,9 +10,9 @@ render(){
 
          <h1 className="text-center cr bb monospacebold end mlop">{this.props.data.title}</h1>
           <br />
-         <div className="mt5">
-
-         <div className="bb mt10 b10px ml35 pb5 scoreBox">
+         <div className="mt5 row">
+         <div className="col-4"/>
+         <div className="col-4 bb mt10 b10px ml35 pb5 scoreBox">
             <br />
             <br />
 
@@ -30,8 +30,10 @@ render(){
             </h3>
 
           </div>
+          
          </div>
-
+         <br />
+         <br />
          <h1 className="backToMapTxt text-center sigmoreFont cy "  onClick = {()=>{this.props.pageChange("start",null)}}  >Main Menu</h1>
 
      </div>
