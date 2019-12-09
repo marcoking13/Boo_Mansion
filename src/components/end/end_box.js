@@ -18,7 +18,7 @@ render(){
             <div className="row">
               <div className="col-6">
 
-                <h3 className="text-center co bold scoreFinal lls">
+                <h3 className="text-center co bold  lls">
                   <img className="icoE ico2"src="images/time.png"/>
                   Time:
                     <strong  className="cy"> {this.props.data.time}</strong>
@@ -26,7 +26,7 @@ render(){
             <br />
           </div>
           <div className="col-6">
-            <h3 className="text-center co bold scoreFinal">
+            <h3 className="text-center co bold ">
               <img className="posRel icoE boE"src="images/logo.png"/>
                 Kills:
                 <strong className="cy"> {this.props.data.kills}</strong>
