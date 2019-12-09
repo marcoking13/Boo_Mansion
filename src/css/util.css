@@ -6,7 +6,9 @@ overflow-y: hidden;
 #root{
   padding:0;
 }
-
+.h100px{
+  height:100px !important;
+}
 .pb20px{
   padding-bottom: 20px;
 }

@@ -15,7 +15,7 @@ render(){
 
 
             <div className="col-1"/>
-            <div className="col-10 bb mt10 b10px  pb20px">
+            <div className="col-10 bb mt10 b10px h100px pb20px">
 
 
                 <div className="row">

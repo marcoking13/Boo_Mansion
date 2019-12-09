@@ -7,14 +7,14 @@ constructor(props){
   super(props);
   this.state = {
     coords:[
-      {top:10 + "%",left:90 + "%"},
-      {top:10 + "%",left:5 + "%"},
+      {top:20 + "%",left:90 + "%"},
+      {top:20 + "%",left:5 + "%"},
       {top:80 + "%",left:5 + "%"},
       {top:40 + "%",left:50 + "%"},
       {top:40 + "%",left:20 + "%"},
       {top:60 + "%",left:30 + "%"},
       {top:30 + "%",left:65 + "%"},
-      {top:10 + "%",left:25 + "%"},
+      {top:20 + "%",left:25 + "%"},
       {top:75 + "%",left:65 + "%"},
       {top:82 + "%",left:25 + "%"},
       {top:50 + "%",left:85 + "%"},
