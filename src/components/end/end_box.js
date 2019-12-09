@@ -9,6 +9,7 @@ render(){
      <div className="container-fluid" style={{background:"url('images/bb.png')"}}>
         <br />
         <br />
+        <br />
          <h1 className="text-center cr bb monospacebold end mlop">{this.props.data.title}</h1>
           <br />
          <div className="mt5 row">
