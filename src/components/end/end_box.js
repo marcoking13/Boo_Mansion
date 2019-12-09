@@ -24,11 +24,11 @@ render(){
 
                     <div className="row">
                         <div className="col-6">
-                          <img src = "images/boo1.png" className="w100"/>
+                          <img src = "images/booShy2.png" className="w100"/>
                         </div>
                           <div className="col-6">
                             <br />
-                            <h2 className="cy mt10 text-center">{0}</h2>
+                            <h2 className="cy mt10 text-center">{this.props.data.kills}</h2>
                           </div>
 
                     </div>
@@ -39,11 +39,11 @@ render(){
 
                     <div className="row">
                         <div className="col-6">
-                          <img src = "images/boo1.png" className="w100"/>
+                          <img src = "images/time.png" className="w100"/>
                         </div>
                           <div className="col-6">
                             <br />
-                            <h2 className="cy mt10 text-center">{0}</h2>
+                            <h2 className="cy mt10 text-center">{this.props.data.time}</h2>
                           </div>
 
                     </div>
